@@ -1,0 +1,52 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page645551.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://learnswift\.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =https
+RewriteCond %{HTTP_HOST} ^www\.learnswift.ru [NC]
+RewriteRule ^(.*)$ https://learnswift\.ru/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^back$ page596450.html [NC]
+RewriteRule ^back/$ page596450.html [NC]
+
+RewriteRule ^success$ page622389.html [NC]
+RewriteRule ^success/$ page622389.html [NC]
+
+RewriteRule ^fail$ page622411.html [NC]
+RewriteRule ^fail/$ page622411.html [NC]
+
+RewriteRule ^payment$ page622426.html [NC]
+RewriteRule ^payment/$ page622426.html [NC]
+
+RewriteRule ^unsubscribe$ page626883.html [NC]
+RewriteRule ^unsubscribe/$ page626883.html [NC]
+
+RewriteRule ^thankyou$ page626891.html [NC]
+RewriteRule ^thankyou/$ page626891.html [NC]
+
+RewriteRule ^23022017$ page626908.html [NC]
+RewriteRule ^23022017/$ page626908.html [NC]
+
+RewriteRule ^wwdc$ page664634.html [NC]
+RewriteRule ^wwdc/$ page664634.html [NC]
+
+RewriteRule ^learntocode1$ page783444.html [NC]
+RewriteRule ^learntocode1/$ page783444.html [NC]
+
+RewriteRule ^agreement$ page10386255.html [NC]
+RewriteRule ^agreement/$ page10386255.html [NC]
+
+RewriteRule ^privacypolicy$ page10614384.html [NC]
+RewriteRule ^privacypolicy/$ page10614384.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild3634-6533-4262-a663-666230326564/favicon2.ico [R=302,L]
+
